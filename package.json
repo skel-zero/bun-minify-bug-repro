@@ -1,0 +1,20 @@
+{
+  "name": "bun_report",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "run": "bun index.ts",
+    "run:compiled": "bun build --compile --sourcemap index.ts --outfile=server && ./server",
+    "run:compiled-with-minify": "bun build --compile --minify --sourcemap index.ts --outfile=server && ./server"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "fastify": "^5.6.1"
+  }
+}
